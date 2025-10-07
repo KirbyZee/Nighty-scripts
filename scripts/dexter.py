@@ -8,13 +8,18 @@ import random
 )
 def dexter_roll_script():
     """
-    DEXTER ROLL (No Repeat)
+    DEXTER ROLL 
     -----------------------
     Sends a random Dexter-themed edit or GIF with rarity chances.
     Prevents rolling the same clip twice in a row.
     """
 
     MEDIA_POOL = [
+        {"title": "michael jackson x dex", "url": "https://getsharex.co/0AK84", "chance": 50},
+         {"title": "doals", "url": "https://getsharex.co/Gi065", "chance": 50},
+         {"title": "creaming in my panties", "url": "https://getsharex.co/HMfty", "chance": 50},
+        {"title": "cutie patootie uwu", "url": "https://getsharex.co/rRNr9", "chance": 50},
+        {"title": "Chruch nigga", "url": "https://getsharex.co/xA5Jk", "chance": 50},
          {"title": "who's number one now", "url": "https://getsharex.co/usZ4H", "chance": 50},
           {"title": "Peak friendship", "url": "https://getsharex.co/c45PP", "chance": 50},
          {"title": "Dexter is funny!", "url": "https://getsharex.co/WpjAE", "chance": 50},
@@ -31,7 +36,7 @@ def dexter_roll_script():
         {"title": "❤️ Mythical long-haired Doakes ❤️", "url": "https://getsharex.co/eo0v8", "chance": 3}
     ]
 
-    # Store the last rolled title globally (per session)
+ 
     last_roll = {"title": None}
 
     def weighted_choice(pool):
@@ -49,7 +54,7 @@ def dexter_roll_script():
         await ctx.message.delete()
 
 
-        # Reroll if it’s the same as the last one
+   
         roll = weighted_choice(MEDIA_POOL)
         reroll_count = 0
         while last_roll["title"] == roll["title"] and reroll_count < 5:
