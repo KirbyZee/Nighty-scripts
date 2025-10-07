@@ -1,6 +1,6 @@
 @nightyScript(
     name="CMD Error Fix",
-    author="YourName",
+    author="Kirby631",
     description="Shows instructions to fix CMD prompt error when Nighty config is corrupted.",
     usage="<p>cmderror"
 )
